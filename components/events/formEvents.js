@@ -14,8 +14,8 @@ const formEvents = (user) => {
         uid: user.uid
       };
 
-      createCard(payload).then(({ title }) => {
-        const patchPayload = { firebaseKey: title };
+      createCard(payload).then(({ name }) => {
+        const patchPayload = { firebaseKey: name };
 
         updateCard(patchPayload).then(() => {
           getCards(user.uid).then(showCards);

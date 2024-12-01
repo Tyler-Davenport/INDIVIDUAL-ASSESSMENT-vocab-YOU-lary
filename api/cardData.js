@@ -85,8 +85,8 @@ const getCardDetails = async (firebaseKey) => {
   return { ...bookObject };
 };
 
-const cardsByTech = () => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/cards.json?orderBy="category"&equalTo="tech"`, {
+const cardsByTech = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/cards.json?orderBy="uid"&equalTo="${uid}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -94,14 +94,14 @@ const cardsByTech = () => new Promise((resolve, reject) => {
   })
     .then((response) => response.json())
     .then((data) => {
-      const techCard = Object.values(data).filter((item) => item.tech);
+      const techCard = Object.values(data).filter((item) => item.category === 'tech');
       resolve(techCard);
     })
     .catch(reject);
 });
 
-const cardsByLanguage = () => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/cards.json?orderBy="category"&equalTo="language"`, {
+const cardsByLanguage = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/cards.json?orderBy="uid"&equalTo="${uid}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -109,7 +109,7 @@ const cardsByLanguage = () => new Promise((resolve, reject) => {
   })
     .then((response) => response.json())
     .then((data) => {
-      const languageCard = Object.values(data).filter((item) => item.language);
+      const languageCard = Object.values(data).filter((item) => item.category === 'language');
       resolve(languageCard);
     })
     .catch(reject);
