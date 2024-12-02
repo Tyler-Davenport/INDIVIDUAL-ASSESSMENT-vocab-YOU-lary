@@ -16,6 +16,7 @@ const viewCard = (obj) => {
      <h5>${obj.title}</h5>
      ${obj.category}</a>
      <p>${obj.description || ''}</p>
+     <p>${obj.timeSubmitted}</p>
      <hr>   
       </div>
     </div>`;

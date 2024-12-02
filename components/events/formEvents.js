@@ -6,11 +6,14 @@ const formEvents = (user) => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {
     e.preventDefault();
 
+    const timeSubmitted = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true });
+
     if (e.target.id.includes('submit-card')) {
       const payload = {
         title: document.querySelector('#title').value,
         category: document.querySelector('#category').value,
         description: document.querySelector('#description').value,
+        timeSubmitted,
         uid: user.uid
       };
 
@@ -30,6 +33,7 @@ const formEvents = (user) => {
         category: document.querySelector('#category').value,
         description: document.querySelector('#description').value,
         firebaseKey,
+        timeSubmitted,
         uid: user.uid
       };
 

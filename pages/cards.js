@@ -22,6 +22,7 @@ const showCards = (array) => {
             <p class="card-text bold">${item.category}</p>
             <hr>
             <p class="card-text">${item.description}</p>
+            <p class="card-text">${item.timeSubmitted}</p>
             <i class="btn btn-success fas fa-eye" id="view-card-btn--${item.firebaseKey}"></i>
             <i id="edit-card-btn--${item.firebaseKey}" class="fas fa-edit btn btn-info"></i>
             <i id="delete-card-btn--${item.firebaseKey}" class="btn btn-danger fas fa-trash-alt"></i>
