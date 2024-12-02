@@ -3,8 +3,29 @@
 
 
 body {
-  background-color: rgb(216, 132, 23);
-  color: brown;
+  background: radial-gradient(circle at center, rgba(254, 127, 45, 0.8), rgba(35, 61, 77, 0.9), rgba(31, 42, 55, 1));
+  color: #233D4D;
   text-align: center;
   margin-top: 100px;
+}
+
+#store {
+  width: 90%;
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+  margin: auto;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.card {
+  width: 300px;
+  margin: 10px;
+  background: #A8D8D8;
+  border: 3px solid #233D4D;
+  border-radius: 10px;
+  padding: 20px;
+  color: #233D4D;
+  text-align: center;
 }

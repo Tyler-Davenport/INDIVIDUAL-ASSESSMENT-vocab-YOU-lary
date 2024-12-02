@@ -14,12 +14,10 @@ const navigationEvents = (user) => {
 
   document.querySelector('#tech').addEventListener('click', () => {
     cardsByTech(user.uid).then(showCards);
-    console.warn("btn push");
   });
 
   document.querySelector('#language').addEventListener('click', () => {
     cardsByLanguage(user.uid).then(showCards);
-    console.warn("btn push");
   });
 
   document.querySelector('#search').addEventListener('keyup', (e) => {
