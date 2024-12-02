@@ -8,8 +8,8 @@ const viewCard = (obj) => {
   <div class="mt-5 d-flex flex-wrap">
    <div class="d-flex flex-column">
      <div class="mt-5">
-       <i id="edit-card-btn--${obj.firebaseKey}" class="fas fa-edit btn btn-info"></i>
-       <i id="delete-card--${obj.firebaseKey}" class="btn btn-danger fas fa-trash-alt"></i>
+       <a href="#" class="btn btn-info" id="edit-card-btn--${obj.firebaseKey}">✍️</a>
+      <a href="#" class="btn btn-danger" id="delete-card-btn--${obj.firebaseKey}">🔥</a>
      </div>
    </div>
    <div class="text-white ms-5 details">

@@ -10,24 +10,24 @@ const emptyCards = () => {
 const showCards = (array) => {
   clearDom();
 
-  const btnString = '<button class="btn btn-success btn-lg mb-4" id="add-card-btn">Add A Card</button>';
+  const btnString = '<button class="btn btn-primary btn-lg mb-4" id="add-card-btn">Add A Card</button>';
   renderToDOM('#add-button', btnString);
 
   let domString = '';
   array.forEach((item) => {
     domString += `
-      <div class="card">
-        <div class="card-body" style="height: 180px;">
-          <h5 class="card-title">${item.title}</h5>
-            <p class="card-text bold">${item.category}</p>
-            <hr>
-            <p class="card-text">${item.description}</p>
-            <p class="card-text">${item.timeSubmitted}</p>
-            <i class="btn btn-success fas fa-eye" id="view-card-btn--${item.firebaseKey}"></i>
-            <i id="edit-card-btn--${item.firebaseKey}" class="fas fa-edit btn btn-info"></i>
-            <i id="delete-card-btn--${item.firebaseKey}" class="btn btn-danger fas fa-trash-alt"></i>
-        </div>
-      </div>`;
+
+<div class="card">
+  <h5 class="card-header">${item.title}</h5>
+  <div class="card-body">
+    <h5 class="card-title">${item.category}</h5>
+    <p class="card-text">${item.description}</p>
+    <p class="card-text">${item.timeSubmitted}</p>
+    <a href="#" class="btn btn-warning" id="view-card-btn--${item.firebaseKey}">📖</a>
+    <a href="#" class="btn btn-info" id="edit-card-btn--${item.firebaseKey}">✍️</a>
+    <a href="#" class="btn btn-danger" id="delete-card-btn--${item.firebaseKey}">🔥</a>
+  </div>
+</div>`;
   });
   renderToDOM('#store', domString);
 };

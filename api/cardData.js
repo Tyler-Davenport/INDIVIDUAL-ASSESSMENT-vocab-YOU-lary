@@ -3,7 +3,6 @@ import client from '../utils/client';
 
 const endpoint = client.databaseURL;
 
-// GET ALL CARDS
 const getCards = (uid) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/cards.json?orderBy="uid"&equalTo="${uid}"`, {
     method: 'GET',

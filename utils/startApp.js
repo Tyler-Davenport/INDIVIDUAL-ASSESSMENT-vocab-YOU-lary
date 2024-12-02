@@ -9,11 +9,11 @@ import navigationEvents from "../components/events/navigationEvents";
 import formEvents from "../components/events/formEvents";
 
 const startApp = (user) => {
-  domBuilder(user); // BUILD THE DOM
-  domEvents(user); // ADD THE EVENT LISTENTERS TO THE DOM
-  formEvents(user); // ADD FORM EVENT LISTENTERS TO THE DOM
-  navBar(); // DYNAMICALLY ADD THE NAV
-  logoutButton(); // ADD THE LOGOUT BUTTON COMPONENT
+  domBuilder(user);
+  domEvents(user);
+  formEvents(user);
+  navBar();
+  logoutButton();
   navigationEvents(user);
   getCards(user.uid).then((cards) => showCards(cards));
 };
