@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 import { showCards } from '../pages/cards';
 import client from '../utils/client';
 
