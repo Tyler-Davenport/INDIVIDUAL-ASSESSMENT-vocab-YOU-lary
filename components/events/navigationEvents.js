@@ -21,7 +21,8 @@ const navigationEvents = (user) => {
   });
 
   document.querySelector('#search').addEventListener('keyup', (e) => {
-    if (e.keycode === 13) {
+    if (e.keyCode === 13) {
+      console.warn('work');
       searchCards(user);
       document.querySelector('#search').value = '';
     }
