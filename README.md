@@ -49,4 +49,4 @@
 ![Login](https://github.com/user-attachments/assets/289cee47-6eb9-469d-a3b9-d33a359b1add)
 
 ## Loom Walkthrough
-[https://www.loom.com/share/f289dfa40fc347a8aec3757b466d5988?sid=e2b838b1-f6cf-45cc-b5db-18e083a7a44b](https://www.loom.com/share/4167d41ff1564904b8c02926dcc69628?sid=e431e482-f421-49b2-adb9-3484bf9091d5)
+https://www.loom.com/share/baa98bee38174e2fbd3c12e918c9898b?sid=b952f28f-d517-4b8a-99de-511588f82859
